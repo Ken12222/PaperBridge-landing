@@ -3,6 +3,7 @@ import { NAV, } from "../content.js";
 import { SITE } from "../config.js";
 import WaitlistLink from "./WaitlistLink.jsx";
 
+const logo = "../../public/logo.svg"
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -16,7 +17,11 @@ export default function Header() {
   return (
     <header className={`header${isScrolled ? " header--scrolled" : ""}`}>
       <a className="logo" href="#top" aria-label={`${SITE.name} home`}>
-        {/* <span className="logo__mark" aria-hidden="true" /> */}
+        <img
+            src={logo}
+            alt="Logo"
+            style={{ width: "30px", height: "30px" }}
+        />
         {SITE.name}
       </a>
       <nav className="header__nav" aria-label="Main">
