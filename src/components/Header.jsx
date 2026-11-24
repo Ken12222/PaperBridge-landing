@@ -3,7 +3,7 @@ import { NAV, } from "../content.js";
 import { SITE } from "../config.js";
 import WaitlistLink from "./WaitlistLink.jsx";
 
-const logo = "../../public/logo.svg"
+const logo = "/logo.svg"
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
