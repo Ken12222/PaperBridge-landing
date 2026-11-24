@@ -1,10 +1,8 @@
 import { HERO_STATS } from "../content.js";
 import WaitlistLink from "./WaitlistLink.jsx";
 // import {image1} from 
- const images = {
-                name:"image",
-                src: "../../public/image1.jpg"
-              }
+ const images = "https://images.unsplash.com/photo-1562240020-ce31ccb0fa7d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D";
+//  const images = "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&auto=format&fit=crop";
 
             
 function HeroVisual() {
@@ -13,11 +11,11 @@ function HeroVisual() {
       <img         
       style={{
             width: "100%",
-            height: "100%",
+            height: "450px",
             objectFit: "cover",
             objectPosition: "center",
             borderRadius: "24px"
-        }} src={images.src} />
+        }} src={images} alt="Workspace" />
     </div>
   );
 }

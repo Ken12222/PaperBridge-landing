@@ -18,14 +18,14 @@ export default function Footer() {
         </div>
         <div>
           <p className="eyebrow">Community</p>
-          <WaitlistLink className="textlink">Join on WhatsApp</WaitlistLink>
+          <WaitlistLink className="">Join on WhatsApp</WaitlistLink>
         </div>
-        {SITE.contactEmail && (
+        {/* {SITE.contactEmail && (
           <div>
             <p className="eyebrow">Contact</p>
-            <a className="textlink" href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+            <a className="" href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
           </div>
-        )}
+        )} */}
       </div>
       <p className="wrap footer__legal">&copy; {SITE.year} {SITE.name}. All rights reserved.</p>
     </footer>
