@@ -1,28 +1,23 @@
 import { HERO_STATS } from "../content.js";
 import WaitlistLink from "./WaitlistLink.jsx";
+// import {image1} from 
+ const images = {
+                name:"image",
+                src: "../../public/image1.jpg"
+              }
 
+            
 function HeroVisual() {
   return (
     <div className="hero__visual" aria-hidden="true">
-      <div className="hero__pills">
-        <span className="pill">UPLOAD</span>
-        <span className="pill">READ</span>
-        <span className="pill">REVIEW</span>
-      </div>
-      <div className="doc">
-        <span className="doc__bar doc__bar--title" />
-        <span className="doc__bar" />
-        <span className="doc__bar doc__bar--w82" />
-        <span className="doc__ink doc__ink--w45" />
-        <span className="doc__ink doc__ink--w64" />
-        <span className="doc__ink doc__ink--w52" />
-        <span className="doc__bar doc__bar--last" />
-      </div>
-      <div className="extract">
-        <p className="extract__label">EXTRACTED (SAMPLE)</p>
-        <p className="extract__row"><span>Name</span><strong>Sample Client</strong></p>
-        <p className="extract__row"><span>Phone</span><strong className="extract__check">Check</strong></p>
-      </div>
+      <img         
+      style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+            borderRadius: "24px"
+        }} src={images.src} />
     </div>
   );
 }

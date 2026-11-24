@@ -17,7 +17,6 @@ export default function App() {
       <Header />
       <main id="main">
         <Hero />
-        {/* <Marquee /> */}
         <Packet />
         <Audience />
         <UseCases />

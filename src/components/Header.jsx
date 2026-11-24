@@ -1,12 +1,22 @@
+import { useEffect, useState } from "react";
 import { NAV, } from "../content.js";
 import { SITE } from "../config.js";
 import WaitlistLink from "./WaitlistLink.jsx";
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateHeader = () => setIsScrolled(window.scrollY > 8);
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    return () => window.removeEventListener("scroll", updateHeader);
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header${isScrolled ? " header--scrolled" : ""}`}>
       <a className="logo" href="#top" aria-label={`${SITE.name} home`}>
-        <span className="logo__mark" aria-hidden="true" />
+        {/* <span className="logo__mark" aria-hidden="true" /> */}
         {SITE.name}
       </a>
       <nav className="header__nav" aria-label="Main">
